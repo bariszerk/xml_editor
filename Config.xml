@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+
+  <!-- Kullanıcı Ayarları -->
+  <UserSettings>
+    <!-- Dil seçeneği -->
+    <!--Türkçe ====> tr-TR -->
+   <!-- <Culture>tr-TR</Culture> -->
+    <!--İngilizce ====> en-US -->
+    <Culture>tr-TR</Culture>
+    <!-- Versiyon Bilgisi-->
+    <Version>HVBS ENTEGRASYON SUNUCU YAZILIMI v1.3</Version>
+    <LoginName>HVBS Entegrasyon Sunucu Yazılımı</LoginName>
+    <!-- Gizlilik Derecesi-->
+    <SecurityDegree>TİCARİ GİZLİ</SecurityDegree>
+
+    <!-- Veritabanı Ayarları-->
+    <!-- Veritabanı Host-->
+    <DatabaseHost>localhost</DatabaseHost>
+    <!-- Veritabanının çalıştığı Port'u belirler. -->
+    <DatabasePort>5432</DatabasePort>
+    <!-- Veritabanı adını belirler. -->
+    <DatabaseName>MYWEBIntegration</DatabaseName>
+    <!-- Veritabanı Kullanıcı Adını belirler. -->
+    <DatabaseUsername>postgres</DatabaseUsername>
+    <!-- Veritabanı Şifresini belirler. -->
+    <DatabasePassword>1234</DatabasePassword>
+
+    <!-- Şifre Geçerlilik Süresinin kontrol edileceği periyodu belirler.(Gün Cinsinden) -->
+    <PasswordExpirationPeriod>99999</PasswordExpirationPeriod>
+    <!-- Son Giriş Süresinin kontrol edileceği periyodu belirler.(Gün cinsinden) -->
+    <LastLoginPeriod>30</LastLoginPeriod>
+    <!-- Şifre geçerlilik süresininin sona ereceğini belirten uyarının gösterileceği kalan süreyi belirler.(Gün cinsinden) -->
+    <ExpirationWarningThreshold>3</ExpirationWarningThreshold>
+    <!-- Herhangi bir aktivite gerçekleşmediği takdirde kilit ekranının açılacağı süreyi belirler.(Milisaniye cinsinden) base:540 -->
+    <LockScreenThreshold>5000</LockScreenThreshold><!-- TEST için değiştirildi değer 120 olacak-->
+    <!-- Maksimum yetkili kullanıcı sayısını belirler. -->
+    <MaximumAdminCount>2</MaximumAdminCount>
+
+    <!-- Maksimum hatalı giriş denemesi sayısını belirler. -->
+    <MaximumLoginAttemptCount>5</MaximumLoginAttemptCount>
+    <!-- Maksimum hatalı giriş denemesi sonucunda beklenilecek süreyi belirler.(Saniye cinsinden) -->
+    <FailLoginBaseTimeout>60</FailLoginBaseTimeout>
+    <!-- Maksimum hatalı giriş denemesi sonrası her hatalı girişte bekleme süresinin ne kadar artacağını belirler.(Saniye cinsinden) -->
+    <FailLoginAddedTimeout>20</FailLoginAddedTimeout>
+
+    <!-- Veritabanında saklanacak maksimum kullanıcı işlem kaydı sayısını belirler. -->
+    <MaximumUserOperationRecordCount>500</MaximumUserOperationRecordCount>
+    <!-- Arayüzde Kullanıcı İşlem Listesinde 1 sayfada gösterilecek kayıt sayısını belirler -->
+    <MaximumUserOperationRecordCountForPage>15</MaximumUserOperationRecordCountForPage>
+
+    <!-- Veritabanında saklanacak maksimum alarm kaydı sayısını belirler. -->
+    <MaximumAlarmRecordCount>50</MaximumAlarmRecordCount>
+    <!-- Arayüzde Alarm Listesinde 1 sayfada gösterilecek kayıt sayısını belirler -->
+    <MaximumAlarmRecordCountForPage>15</MaximumAlarmRecordCountForPage>
+
+
+    <!-- Yeni kullanıcı tanımlanırken TC kimlik numarasının tüm kurallara göre denetlenip denetlenmeyeceğini belirler. -->
+    <!-- True / False -->
+    <HardenedIdentityNumberCheck>True</HardenedIdentityNumberCheck>
+
+    <!-- MyWebIntegrationService bağlantı ayarları -->
+    <!-- MYWebIntegrationService kullanıcı adı.-->
+    <IntegrationServiceUsername>deneme</IntegrationServiceUsername>
+    <!-- MYWebIntegrationService şifresi.-->
+    <IntegrationServicePassword>deneme</IntegrationServicePassword>
+
+    <!-- MyWebService bağlantı ayarları -->
+    <!-- MYWeb servisi ile MYWeb Entegrasyon yazılımı arasında bağlantı durumunun kontrol edileceği zaman aralığını belirler.(Dakika cinsinden). -->
+    <MyWebServiceConnectionCheckPeriod>10</MyWebServiceConnectionCheckPeriod>
+    <!-- MYWeb servisi ile MYWeb Entegrasyon yazılımı arasında başarısız bağlantı sonucunda bağlantının ne kadar sıklıkla tekrar deneneceğini belirler.(Dakika Cinsinden) -->
+    <MyWebServiceRetryToConnectPeriod>10</MyWebServiceRetryToConnectPeriod>
+
+    <!-- Komuta kontrol birimleri ile bağlantı kurulacak IP adresini belirler. -->
+    <CommandControlServerIP>192.168.1.151</CommandControlServerIP>
+    <!-- Komuta kontrol birimleri ile bağlantı kurulacak Port numarasını belirler. -->
+    <CommandControlServerPort>1026</CommandControlServerPort>
+    <!-- Komuta kontrol sunucusunun başlatılabileceği minimum portu belirler.-->
+    <CommandControlServerMinPort>1</CommandControlServerMinPort>
+    <!-- Komuta kontrol sunucusunun başlatılabileceği maksimum portu belirler.-->
+    <CommandControlServerMaxPort>6000</CommandControlServerMaxPort>
+    <!-- Komuta kontrol sunucusunun başlatılabileceği minimum portu belirler. RijndaelCrypt ile şifrelenmelidir.-->
+    <CommandControlServerUsername>mmQTaGzIxgCQYXuNbudAcA==</CommandControlServerUsername>
+    <!-- Komuta kontrol sunucusunun başlatılabileceği maksimum portu belirler. RijndaelCrypt ile şifrelenmelidir.-->
+    <CommandControlServerPassword>pYVWZnWI2yUkAjRNSWdS2Q==</CommandControlServerPassword>
+
+    <!-- HGE-HSKE ayarları -->
+    <!-- HGE ve HSKE verilerinin geçerlilik süresinin kontrol edileceği zaman aralığını belirler.(Saniye cinsinden) -->
+    <ACOATOExpirationCheckPeriod>60</ACOATOExpirationCheckPeriod>
+    <!-- HGE verilerinin yükleneceği dosyaların uzantısını belirler.-->
+    <ATOFileExtension>.adatp3</ATOFileExtension>
+    <!-- HSKE verilerinin yükleneceği dosyaların uzantısını belirler.-->
+    <ACOFileExtension>.adatp3</ACOFileExtension>
+    <!-- NOTAM verilerinin yükleneceği dosyaların uzantısını belirler.-->
+    <NOTAMFileExtension>.xml</NOTAMFileExtension>
+    <!-- .......................................................... -->
+    <!-- ......................NOTAM............................... -->
+    <!-- .......................................................... -->
+    
+    <!-- NOTAM verilerinin MYS den sorgulanacağı dakika aralığını belirler.-->
+    <NOTAMcheckInterval>20</NOTAMcheckInterval>
+    <!-- NOTAM verilerinin geçerlilik durumunun kontrol edilme aralığını belirler. Saniye cinsindendir.-->
+    <NOTAMExpiredCheckInterval>3000</NOTAMExpiredCheckInterval>
+    <!-- NOTAM verilerinin iptal edildikten sonra silinme işlemi için beklenen süreyi belirtir. Saniye cinsindendir.-->
+    <NOTAMDeleteCooldown>60</NOTAMDeleteCooldown>
+    <NOTAMReplacedDeleteCooldown>60</NOTAMReplacedDeleteCooldown>
+     <!-- METEO verilerinin SFTP'den sorgulanacağı dakika aralığını belirler.-->
+      
+    
+
+    <!-- .......................................................... -->
+    <!-- .........................METEO............................ -->
+    <!-- .......................................................... -->
+    <!-- Meteonun kaç dakikada bir sorgulanacağını belirler-->
+    <METEOcheckInterval>10</METEOcheckInterval>
+    <!-- Meteonun kaç dakika geçerli sayılacağını belirler-->
+    <METEOValidityTime>1440</METEOValidityTime>
+    <!-- SFTP Bağlantı parametreleri-->
+    <!-- Host Değerini belirler-->
+    <MeteoHost>192.168.1.151</MeteoHost>
+    <!-- Name Değerini belirler-->
+    <MeteoName>onbiron</MeteoName>
+    <!-- Password Değerini belirler-->
+    <MeteoPass>hakan2222</MeteoPass>
+    <!-- Port Değerini belirler-->
+    <MeteoPort>2222</MeteoPort>
+    <!-- SSH-Fingerprint Değerini belirler-->
+    <MeteoSSH>ssh-rsa 1024 OYPIli9Wj1eoblDvYp8j9398raLbD5R7QC6yUfP/ym4</MeteoSSH>
+    <!-- LocalPath Değerini belirler-->
+    <MeteoLocalPath>C:\Users\onbiron\Desktop\SFTP_ROOT\METEOLocal\</MeteoLocalPath>
+    <!-- Meteo yerel dizin Değerini belirler-->
+    <MeteoLocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\METEOLocal\</MeteoLocalDir>
+    <!-- RemotePath Değerini belirler-->
+    <MeteoRemotePath>C:\Users\onbiron\Desktop\SFTP_ROOT\METEO\</MeteoRemotePath>
+    <!-- SFTP remote dizininnde oluşturulan filtreli Meteoların dizin değerini belirler-->
+    <MeteoRemoteMeteoPath>/CreatedMeteos/</MeteoRemoteMeteoPath>
+    
+ <!-- .......................................................... -->
+    <!-- .........................DTED............................ -->
+    <!-- .......................................................... -->
+    <!-- DTEDnun kaç dakikada bir sorgulanacağını belirler-->
+    <DTEDcheckInterval>15</DTEDcheckInterval>
+    <!-- DTEDnun kaç saat geçerli sayılacağını belirler-->
+    <DTEDValidityTime>1000</DTEDValidityTime>
+    <!-- SFTP Bağlantı parametreleri-->
+    <!-- Host Değerini belirler-->
+    <DTEDHost>192.168.1.151</DTEDHost>
+    <!-- Name Değerini belirler-->
+    <DTEDName>onbiron</DTEDName>
+    <!-- Password Değerini belirler-->
+    <DTEDPass>hakan2222</DTEDPass>
+    <!-- Port Değerini belirler-->
+    <DTEDPort>2222</DTEDPort>
+    <!-- SSH-Fingerprint Değerini belirler-->
+    <DTEDSSH>ssh-rsa 1024 OYPIli9Wj1eoblDvYp8j9398raLbD5R7QC6yUfP/ym4</DTEDSSH>
+    <!-- LocalPath Değerini belirler-->
+    <DTEDLocalPath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\</DTEDLocalPath>
+    <!-- DTED0 yerel dizin Değerini belirler-->
+    <DTED0LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED0\</DTED0LocalDir>
+    <!-- DTED1 yerel dizin Değerini belirler-->
+    <DTED1LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED1\</DTED1LocalDir>
+    <!-- DTED0 yerel dizin Değerini belirler-->
+    <DTED2LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED2\</DTED2LocalDir>
+    <!-- RemotePath Değerini belirler-->
+    <DTEDRemotePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\</DTEDRemotePath>
+    <!--<DTED0DrivePath>\\128.20.16.8\mapdata$\04_YUKSEKLIK_VERILERI\DTED_0\DTED\E000\</DTED0DrivePath>
+    <DTED1DrivePath>\\128.20.16.8\mapdata$\04_YUKSEKLIK_VERILERI\DTED_1\Turkiye\DTED\E024\</DTED1DrivePath>-->
+    <DTED0DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED0\</DTED0DrivePath>
+    <DTED1DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED1\</DTED1DrivePath>
+    <DTED2DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED2\</DTED2DrivePath>
+    <!-- SFTP remote dizininnde oluşturulan filtreli DTEDların dizin değerini belirler-->
+    <DTEDRemoteDTEDPath>/CreatedDTEDs/</DTEDRemoteDTEDPath>
+    <DTEDRemoteDTED0Path>/CreatedDTEDs/DTED0/</DTEDRemoteDTED0Path>
+    <DTEDRemoteDTED1Path>/CreatedDTEDs/DTED1/</DTEDRemoteDTED1Path>
+    <DTEDRemoteDTED2Path>/CreatedDTEDs/DTED2/</DTEDRemoteDTED2Path>
+	  <!-- DTED verilerinin yükleneceği dosyaların uzantısını belirler.-->
+	  <DTEDFileExtension>.dted</DTEDFileExtension>
+
+  </UserSettings>
+
+
+
+  <!-- LOG AYARLARI -->
+  <log4net>
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%logger] %level - %message%newline%exception" />
+      </layout>
+    </appender>
+    <appender name="FileAppender" type="log4net.Appender.FileAppender">
+      <file value="C:\Logs\MyLogFile.txt" />
+      <appendToFile value="true" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%logger] %level - %message%newline%exception%newline%timestamp" />
+      </layout>
+    </appender>
+    <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+      <encoding value="utf-8" />
+      <file value="C:\Logs\HvBSIntegrationServerLog.txt" />
+      <preserveLogFileNameExtension value="true" />
+      <appendToFile value="true" />
+      <rollingStyle value="Size" />
+      <maximumFileSize value="50MB" />
+      <maxSizeRollBackups value="5" />
+      <staticLogFileName value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d{yyyy-MM-dd HH:mm:ss.fff} [%thread] [%logger] %level - %message%newline%exception" />
+      </layout>
+    </appender>
+    <root>
+      <!-- Ayar seçenekleri  -->
+      <!-- ALL -->
+      <!-- DEBUG-->
+      <!-- INFO -->
+      <!-- WARN -->
+      <!-- ERROR -->
+      <!-- FATAL -->
+      <level value="ALL" />
+      <appender-ref ref="RollingFileAppender" />
+      <!--<appender-ref ref="ConsoleAppender"/>-->
+      <!--<appender-ref ref="FileAppender"/>-->
+    </root>
+  </log4net>
+
+</Settings>

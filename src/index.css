@@ -1,0 +1,195 @@
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 98vw;
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.box-row {
+    background-color: #F0F8FF; /* Dark gray background color for rows */
+    width: 40vw;
+    border: 1px solid #444;
+    display: flex; /* Horizontal alignment of label and textarea */
+    justify-content: space-between; /* Distribute space between label and textarea */
+    padding: 10px 25px;
+    align-items: center;
+}
+
+.left-column, .right-column {
+    width: 40%; /* Each column takes half of the box's width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 25px; /* Adjust padding as needed */
+}
+
+/* Alternate row colors for clarity */
+.left-column .box-row:nth-child(odd), .right-column .box-row:nth-child(odd) {
+    background-color: white;
+}
+
+.left-column .box-row:nth-child(even), .right-column .box-row:nth-child(even) {
+    background-color: #F0F8FF;
+}
+
+.topMenu {
+    position: fixed;
+    bottom: 15px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.top-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #0023ff; /* Different background color for the top menu */
+    padding: 10px; /* Add padding for spacing */
+    color: white;
+}
+
+.file-select {
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    width: 250px;
+    text-align: left;
+    margin-right: 0;
+}
+
+/* Apply this style to each textarea */
+.textarea {
+    width: 350px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.hover-able-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: black;
+}
+
+.hidden-content {
+    display: none;
+    position: absolute;
+    width: 130px;
+    top: -50%;
+    left: 100%;
+    transform: translateX(10px);
+    background-color: #675032;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: white;
+}
+
+.hover-able-label:hover .hidden-content {
+    display: block;
+}
+
+.button-5 {
+    align-items: center;
+    background-clip: padding-box;
+    background: linear-gradient(to bottom, darkblue 30%, black 70%);
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button-5:hover, .button-5:focus {
+    background-color: #7c7cff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+    transform: translateY(-1px);
+}
+
+.button-5:active {
+    background-color: #b2c7e1;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.button-8 {
+    background: #7892c2 linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    border-radius: 10px;
+    border: 1px solid #4e6096;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+}
+
+.button-8:hover {
+    background: #476e9e linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+}
+
+.button-8:active {
+    position: relative;
+    top: 1px;
+}
