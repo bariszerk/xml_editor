@@ -30,7 +30,7 @@ const createWindow = () => {
     Menu.setApplicationMenu(menu);
 
     // Open the DevTools.
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 
 };
 
@@ -74,6 +74,18 @@ ipcMain.on('select-path-dialog', (event, key) => {
         console.error(err);
     });
 });
+
+/*ipcMain.on('open-default-file-dialog', (event) => {
+    dialog.showOpenDialog({
+        properties: ['openDirectory']
+    }).then(result => {
+        if (!result.canceled && result.filePaths.length > 0) {
+            event.reply('selected-default-file', result.filePaths[0]);
+        }
+    }).catch(err => {
+        console.error(err);
+    });
+});*/
 
 
 // This method will be called when Electron has finished

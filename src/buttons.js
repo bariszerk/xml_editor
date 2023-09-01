@@ -1,11 +1,16 @@
 const {readFileSync} = require('original-fs');
 const {writeFileSync} = require('original-fs');
-const {ipcRenderer} = require('electron');
+const {ipcRenderer, app} = require('electron');
 const loadBtn = document.getElementById('loadBtn');
 const saveBtn = document.getElementById('saveBtn');
-const box = document.getElementById('box');
+// const buttonDef = document.getElementById('defaultDir');
 const path = require('path');
+let configFileLocation = './Config.xml';
 
+const storedConfigFileLocation = app && app.getPath('userData');
+if (storedConfigFileLocation) {
+    configFileLocation = storedConfigFileLocation;
+}
 
 const cheerio = require('cheerio')
 
@@ -100,7 +105,7 @@ function displayDatabase(xmlContent, xmlFileName) {
     });
 
     const xmlFileNameElement = document.getElementById('xmlFileName');
-    xmlFileNameElement.textContent = `Loaded XML File: ${xmlFileName}`;
+    xmlFileNameElement.textContent = `${xmlFileName}`;
 
     // Select the 'UserSettings' elements within 'Settings'
     const userSettings = $('Settings > UserSettings').children();
@@ -200,25 +205,41 @@ ipcRenderer.on('selected-saveFile', (event, filePath, updatedXmlContent) => {
 });
 //load file
 ipcRenderer.on('selected-file', (event, filePath) => {
-  xmlContent = readFileSync(filePath, 'utf8');
-  const xmlFileName = path.basename(filePath)
-  displayDatabase(xmlContent, xmlFileName);
+    let xmlContent = readFileSync(filePath, 'utf8');
+    const xmlFileName = path.basename(filePath)
+    displayDatabase(xmlContent, xmlFileName);
 })
+
+/*buttonDef.addEventListener('click', () => {
+    ipcRenderer.send('open-default-file-dialog')
+})*/
+
+/*ipcRenderer.on('selected-default-file', (event, filePath) => {
+    configFileLocation = filePath;
+
+    // Store the selected directory in app settings
+    if (app) {
+        app.setPath('userData', configFileLocation);
+    }
+    configFileLocation = configFileLocation + '/Config.xml'
+    loadConfigFile(configFileLocation);
+})*/
+
+loadConfigFile(configFileLocation);
+
+function loadConfigFile(filePath) {
+    try {
+        const defaultXmlContent = readFileSync(filePath, 'utf8');
+        let xmlFileName = 'Config.xml';
+        displayDatabase(defaultXmlContent, xmlFileName);
+    } catch (error) {
+        console.error('Error loading default Config.xml:', error);
+    }
+}
+
 
 
 function isFilePath(value) {
     // Check if the value starts with "C:\"
     return value.toString().startsWith("C:\\");
-}
-
-try {
-    const defaultXmlContent = readFileSync('./Config.xml', 'utf8');
-    let xmlFileName = 'Config.xml';
-    displayDatabase(defaultXmlContent, xmlFileName);
-} catch (error) {
-    console.error('Error loading default Config.xml:', error);
-    const errorMessage = document.createElement('div');
-    errorMessage.textContent = 'Error loading default Config.xml';
-    errorMessage.style.color = 'red';
-    box.appendChild(errorMessage);
 }

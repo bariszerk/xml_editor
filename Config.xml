@@ -157,7 +157,7 @@
     <DTEDLocalPath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\</DTEDLocalPath>
     <!-- DTED0 yerel dizin Değerini belirler-->
     <DTED0LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED0\</DTED0LocalDir>
-    <!-- DTED1 yerel dizin Değerini belirler-->
+    <!-- DTED0 yerel dizin Değerini belirler-->
     <DTED1LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED1\</DTED1LocalDir>
     <!-- DTED0 yerel dizin Değerini belirler-->
     <DTED2LocalDir>C:\Users\onbiron\Desktop\SFTP_ROOT\DTEDLocal\DTED2\</DTED2LocalDir>
@@ -165,7 +165,7 @@
     <DTEDRemotePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\</DTEDRemotePath>
     <!--<DTED0DrivePath>\\128.20.16.8\mapdata$\04_YUKSEKLIK_VERILERI\DTED_0\DTED\E000\</DTED0DrivePath>
     <DTED1DrivePath>\\128.20.16.8\mapdata$\04_YUKSEKLIK_VERILERI\DTED_1\Turkiye\DTED\E024\</DTED1DrivePath>-->
-    <DTED0DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED0\</DTED0DrivePath>
+	  <DTED0DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED0\</DTED0DrivePath>
     <DTED1DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED1\</DTED1DrivePath>
     <DTED2DrivePath>C:\Users\onbiron\Desktop\SFTP_ROOT\DTED\DTED2\</DTED2DrivePath>
     <!-- SFTP remote dizininnde oluşturulan filtreli DTEDların dizin değerini belirler-->
